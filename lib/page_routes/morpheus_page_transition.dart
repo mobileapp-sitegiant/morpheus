@@ -188,7 +188,9 @@ class MorpheusPageTransition extends StatelessWidget {
                     child: child,
                   ),
                   builder: (context, child) => ClipRRect(
-                    borderRadius: borderRadius.evaluate(positionAnimationCurve),
+                    borderRadius:
+                        borderRadius.evaluate(positionAnimationCurve) ??
+                            BorderRadius.circular(0),
                     clipBehavior: Clip.antiAlias,
                     child: Stack(
                       children: <Widget>[
